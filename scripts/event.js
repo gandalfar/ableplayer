@@ -534,4 +534,8 @@
     });
   };
 
+  AblePlayer.prototype.safariWorkaround = function() {
+    $('.js-ableplayer-captions').remove();
+  };
+
 })(jQuery);

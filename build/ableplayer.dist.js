@@ -620,6 +620,7 @@
       thisObj.initializing = false;
       thisObj.refreshControls();
       thisObj.addSeekEventHandler();
+      thisObj.safariWorkaround();
 
       // After done messing with the player, this is necessary to fix playback on iOS
       if (thisObj.player === 'html5' && thisObj.isIOS()) {
@@ -859,7 +860,7 @@
       while (i < textTracks.length) {
         // mode is either 'disabled', 'hidden', or 'showing'
         // neither 'disabled' nor 'hidden' hides default captions in Safari 8.0.2
-        textTracks[i].mode = 'disabled';
+        textTracks[i].mode = 'hidden';
         i += 1;
       }
     }
@@ -6535,6 +6536,10 @@
       thisObj.seekTo(seekTime);
       thisObj.handlePlay();
     });
+  };
+
+  AblePlayer.prototype.safariWorkaround = function() {
+    $('.js-ableplayer-captions').remove();
   };
 
 })(jQuery);
