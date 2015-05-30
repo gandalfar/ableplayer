@@ -191,10 +191,18 @@
   AblePlayer.prototype.setDimensions = function() {
     // override default dimensions with width and height attributes of media element, if present
     if (this.$media.attr('width')) {
-      this.playerWidth = parseInt(this.$media.attr('width'), 10);
+      if ( this.$media.attr('width') === 'auto' ) {
+        this.playerWidth = this.$media.outerWidth();
+      } else {
+        this.playerWidth = parseInt(this.$media.attr('width'), 10);
+      }
     }
     if (this.$media.attr('height')) {
-      this.playerHeight = parseInt(this.$media.attr('height'), 10);
+      if ( this.$media.attr('height') === 'auto' ) {
+        this.playerHeight = this.$media.outerHeight();
+      } else {
+        this.playerHeight = parseInt(this.$media.attr('height'), 10);
+      }
     }
   };
 
