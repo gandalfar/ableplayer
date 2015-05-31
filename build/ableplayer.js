@@ -6554,7 +6554,7 @@ console.log('this.jwPlayer.load');
 
     $(window).bind('able-seek', function(event, seekTime) {
       thisObj.seekTo(seekTime);
-      thisObj.handlePlay();
+      thisObj.playMedia();
     });
   };
 
