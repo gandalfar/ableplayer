@@ -1,7 +1,6 @@
 (function ($) {
   // Set default variable values.
   AblePlayer.prototype.setDefaults = function () {
-
     // Debug - set to true to write messages to console; otherwise false
     this.debug = false;
 
@@ -489,11 +488,11 @@
         if (thisObj.mediaType === 'video') {
           thisObj.jwPlayer = jwplayer(thisObj.jwId).setup({
             playlist: [{
+              image: thisObj.$media.attr('poster'),
               sources: sources
             }],
             flashplayer: flashplayer,
             html5player: html5player,
-            image: thisObj.$media.attr('poster'),
             controls: false,
             volume: thisObj.defaultVolume * 100,
             height: jwHeight,
