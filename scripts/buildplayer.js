@@ -188,6 +188,8 @@
       'class' : 'able-transcript'
     });
 
+    this.$transcriptDiv.height(this.playerHeight);
+
     // Transcript toolbar content:
     this.$autoScrollTranscriptCheckbox = $('<input id="autoscroll-transcript-checkbox" type="checkbox">');
     this.$transcriptToolbar.append($('<label for="autoscroll-transcript-checkbox">' + this.tt.autoScroll + ': </label>'), this.$autoScrollTranscriptCheckbox);
