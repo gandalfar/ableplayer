@@ -5796,7 +5796,7 @@
           var hasEscapedBrackets = escapedOpenBracket !== -1 && escapedCloseBracket !== -1;
           if ( hasEscapedBrackets ) {
             hasBrackets = false;
-            str = str.replace('\\[', '[').replace('\\]', ']');
+            str = str.replace(/\\\[/g, '[').replace(/\\\]/g, ']');
           }
 
           if ((hasParens && hasBrackets && openBracket < openParen) || hasBrackets) {
