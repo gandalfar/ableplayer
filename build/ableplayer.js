@@ -448,7 +448,7 @@
         this.playerHeight = this.$media.outerHeight();
 
         if ( this.playerHeight < 300 ) {
-          this.playerHeight = 340;
+          this.playerHeight = 416;
         }
       } else {
         this.playerHeight = parseInt(this.$media.attr('height'), 10);
