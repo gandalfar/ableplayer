@@ -444,7 +444,9 @@
       }
     }
     if (this.$media.attr('height')) {
+      
       if ( this.$media.attr('height') === 'auto' ) {
+        
         this.playerHeight = this.$media.outerHeight();
       } else {
         this.playerHeight = parseInt(this.$media.attr('height'), 10);

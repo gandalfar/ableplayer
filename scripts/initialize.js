@@ -199,6 +199,8 @@
     if (this.$media.attr('height')) {
       if ( this.$media.attr('height') === 'auto' ) {
         this.playerHeight = this.$media.outerHeight();
+      } else if ( this.$media.attr('height') === 'ratio' ) {
+        this.playerHeight = this.$media.outerWidth() * parseFloat(this.$media.attr('height-ratio'));
       } else {
         this.playerHeight = parseInt(this.$media.attr('height'), 10);
       }
