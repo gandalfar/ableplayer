@@ -98,6 +98,6 @@ module.exports = function(grunt) {
 
     });
 
-    grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
+    grunt.registerTask('default', ['concat', 'removelogging', 'uglify', 'cssmin']);
     grunt.registerTask('test', ['jshint']);
 };

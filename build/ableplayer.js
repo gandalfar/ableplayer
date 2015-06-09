@@ -4345,8 +4345,6 @@
 
     this.liveUpdatePending = true;
 
-    // this.$autoScrollTranscriptCheckbox.prop('checked', this.autoScrollTranscript);
-    console.log(this.autoScrollTranscript);
     if ( this.autoScrollTranscript !== true) {
       this.autoScrollTranscript = true;
     }
